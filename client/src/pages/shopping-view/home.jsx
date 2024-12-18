@@ -2,21 +2,31 @@ import { Button } from "@/components/ui/button";
 import bannerOne from "../../assets/banner-1.webp";
 import bannerTwo from "../../assets/banner-2.webp";
 import bannerThree from "../../assets/banner-3.webp";
+// import {
+//   Airplay,
+//   BabyIcon,
+//   ChevronLeftIcon,
+//   ChevronRightIcon,
+//   CloudLightning,
+//   Heater,
+//   Images,
+//   Shirt,
+//   ShirtIcon,
+//   ShoppingBasket,
+//   UmbrellaIcon,
+//   WashingMachine,
+//   WatchIcon,
+// } from "lucide-react";
 import {
   Airplay,
-  BabyIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-  CloudLightning,
   Heater,
   Images,
-  Shirt,
-  ShirtIcon,
   ShoppingBasket,
-  UmbrellaIcon,
-  WashingMachine,
   WatchIcon,
 } from "lucide-react";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,22 +41,40 @@ import { useToast } from "@/components/ui/use-toast";
 import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
 
+// const categoriesWithIcon = [
+//   { id: "men", label: "fjsklafhjk", icon: ShirtIcon },
+//   { id: "women", label: "Women", icon: CloudLightning },
+//   { id: "kids", label: "Kids", icon: BabyIcon },
+//   { id: "accessories", label: "Accessories", icon: WatchIcon },
+//   { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
+// ];
+
 const categoriesWithIcon = [
-  { id: "men", label: "Men", icon: ShirtIcon },
-  { id: "women", label: "Women", icon: CloudLightning },
-  { id: "kids", label: "Kids", icon: BabyIcon },
-  { id: "accessories", label: "Accessories", icon: WatchIcon },
-  { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
+  { id: "men", label: "Table Decor", icon: Airplay },
+  { id: "women", label: "Flower Pots", icon: Images },
+  { id: "kids", label: "Lamps", icon: Heater },
+  { id: "accessories", label: "Showpieces", icon: ShoppingBasket },
+  { id: "footwear", label: "Clocks", icon: WatchIcon },
 ];
 
+
+// const brandsWithIcon = [
+//   { id: "nike", label: "Nike", icon: Shirt },
+//   { id: "adidas", label: "Adidas", icon: WashingMachine },
+//   { id: "puma", label: "Puma", icon: ShoppingBasket },
+//   { id: "levi", label: "Levi's", icon: Airplay },
+//   { id: "zara", label: "Zara", icon: Images },
+//   { id: "h&m", label: "H&M", icon: Heater },
+// ];
+
 const brandsWithIcon = [
-  { id: "nike", label: "Nike", icon: Shirt },
-  { id: "adidas", label: "Adidas", icon: WashingMachine },
-  { id: "puma", label: "Puma", icon: ShoppingBasket },
-  { id: "levi", label: "Levi's", icon: Airplay },
-  { id: "zara", label: "Zara", icon: Images },
-  { id: "h&m", label: "H&M", icon: Heater },
+  { id: "nike", label: "Modern Collection", icon: Airplay },
+  { id: "adidas", label: "Classic Collection", icon: Images },
+  { id: "puma", label: "Vintage Collection", icon: WatchIcon },
+  { id: "zara", label: "Luxury Collection", icon: Heater },
 ];
+
+
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { productList, productDetails } = useSelector(
@@ -186,8 +214,10 @@ function ShoppingHome() {
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Shop by Brand</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Curated Collections</h2>
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"> */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
             {brandsWithIcon.map((brandItem) => (
               <Card
                 onClick={() => handleNavigateToListingPage(brandItem, "brand")}

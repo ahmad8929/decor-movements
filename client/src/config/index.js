@@ -161,6 +161,22 @@ export const brandOptionsMap = {
   "h&m": "H&M",
 };
 
+// export const filterOptions = {
+//   Category: [
+//     { id: "men", label: "Table Decor" },
+//     { id: "women", label: "Flower Pots" },
+//     { id: "kids", label: "Lamps" },
+//     { id: "accessories", label: "Showpieces" },
+//     { id: "footwear", label: "Clocks" },
+//   ],
+//   Collections: [
+//     { id: "nike", label: "Modern Collection" },
+//     { id: "adidas", label: "Classic Collection" },
+//     { id: "puma", label: "Vintage Collection" },
+//     { id: "zara", label: "Luxury Collection" },
+//   ],
+// };
+
 export const filterOptions = {
   category: [
     { id: "men", label: "Men" },
