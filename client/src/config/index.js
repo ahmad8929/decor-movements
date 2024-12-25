@@ -54,6 +54,7 @@ export const addProductFormElements = [
     placeholder: "Enter product description",
   },
   {
+    // Categories
     label: "Category",
     name: "category",
     componentType: "select",
@@ -65,7 +66,7 @@ export const addProductFormElements = [
       { id: "footwear", label: "Footwear" },
     ],
   },
-  {
+  { 
     label: "Brand",
     name: "brand",
     componentType: "select",
