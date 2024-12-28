@@ -2,6 +2,7 @@ const Product = require("../../models/Product");
 
 const getFilteredProducts = async (req, res) => {
   try {
+    // console.log("data = ",req.query.category)
     const { category = [], brand = [], sortBy = "price-lowtohigh" } = req.query;
 
     let filters = {};
@@ -41,6 +42,8 @@ const getFilteredProducts = async (req, res) => {
     }
 
     const products = await Product.find(filters).sort(sort);
+    console.log("all products = ",products);
+    
 
     res.status(200).json({
       success: true,
@@ -57,6 +60,7 @@ const getFilteredProducts = async (req, res) => {
 
 const getProductDetails = async (req, res) => {
   try {
+    console.log("hannan");
     const { id } = req.params;
     const product = await Product.findById(id);
 
