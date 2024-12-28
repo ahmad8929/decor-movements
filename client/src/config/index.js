@@ -115,22 +115,22 @@ export const shoppingViewHeaderMenuItems = [
   },
   {
     id: "men",
-    label: "Men",
+    label: "Modern",
     path: "/shop/listing",
   },
   {
-    id: "women",
-    label: "Women",
+    id: "classic",
+    label: "Classic",
     path: "/shop/listing",
   },
   {
-    id: "kids",
-    label: "Kids",
+    id: "vintage",
+    label: "Vintage",
     path: "/shop/listing",
   },
   {
-    id: "footwear",
-    label: "Footwear",
+    id: "luxury",
+    label: "Luxury",
     path: "/shop/listing",
   },
   {
@@ -180,19 +180,19 @@ export const brandOptionsMap = {
 
 export const filterOptions = {
   category: [
-    { id: "men", label: "Men" },
-    { id: "women", label: "Women" },
-    { id: "kids", label: "Kids" },
-    { id: "accessories", label: "Accessories" },
-    { id: "footwear", label: "Footwear" },
+    { id: "modern", label: "Table Decor" },
+    { id: "women", label: "Flowe Pots" },
+    { id: "kids", label: "Lamps" },
+    { id: "accessories", label: "Showpieces" },
+    { id: "footwear", label: "Clocks" },
   ],
   brand: [
-    { id: "nike", label: "Nike" },
-    { id: "adidas", label: "Adidas" },
-    { id: "puma", label: "Puma" },
-    { id: "levi", label: "Levi's" },
-    { id: "zara", label: "Zara" },
-    { id: "h&m", label: "H&M" },
+    { id: "nike", label: " Modern" },
+    { id: "adidas", label: "Classic" },
+    { id: "puma", label: "Vintage" },
+    { id: "levi", label: "Luxury" },
+    { id: "zara", label: "Accessories" },
+    // { id: "h&m", label: "H&M" },
   ],
 };
 
